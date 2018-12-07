@@ -14,7 +14,7 @@
 }
 
 .container text{
-    /* 苹方  思源 */
+    /* 苹方  思源  */
     /* font-family: "PingFangSC-Thin"; */
     font-size:24rpx;
     line-height: 24rpx;
