@@ -1,0 +1,6 @@
+<!--components/like/index.wxml-->
+<view id='LIKE' data-hi='hide' bindtap='onLike'  class='containter'>
+<image src='images/like.png'>
+</image>
+<text>9</text>
+</view>
