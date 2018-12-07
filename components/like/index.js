@@ -19,8 +19,7 @@ Component({
    */
   methods: {
     onLike(event){
-      console.log(event)
-
+      
     }
   }
 })
