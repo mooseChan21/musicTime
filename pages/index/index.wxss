@@ -9,6 +9,10 @@
   width: 128rpx;
   height: 128rpx;
   margin: 20rpx;
+<<<<<<< HEAD
+=======
+  border-radius: 50%;
+>>>>>>> 7b4b832ee6c2f06ea206dbb6267cd644113349b8
 }
 
 .userinfo-nickname {
