@@ -1,18 +1,27 @@
 // pages/classic/classic.js
+import { ClassicModel } from '../../models/classic.js'
+let classic = new ClassicModel(); // 创建classic实例
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    classic:null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    // 获取最近一期刊
+    classic.getLastest((res)=>{
+      //数据更新
+      this.setData({  // 设置data里属性的值
+        classic:res  // 先添加classic到data 再进行数据更新
+      });
+      console.log(this.data);
+    })
   },
 
   /**
