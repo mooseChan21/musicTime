@@ -9,4 +9,4 @@ class ClassicModel extends HTTP{  // 做法类似于vueX  ClassicModel继承了H
           }); 
     }
 }
-export {ClassicModel}
+export { ClassicModel }

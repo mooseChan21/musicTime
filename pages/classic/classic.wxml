@@ -1,2 +1,5 @@
-<v-like like="{{classic.like_status}}" count="{{classic.fav_nums}}"></v-like>
+<view class="header" hover-class="none" hover-stop-propagation="false">
+     <v-epsoide class="epsoide" index="{{classic.index}}"></v-epsoide>
+     <v-like class="like" bind:like='onLike' like="{{classic.like_status}}" count="{{classic.fav_nums}}"></v-like> 
+</view>
 <v-movie img="{{classic.image}}" content="{{classic.content}}"></v-movie>

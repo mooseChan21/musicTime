@@ -1,6 +1,8 @@
 // pages/classic/classic.js
 import { ClassicModel } from '../../models/classic.js'
-let classic = new ClassicModel(); // 创建classic实例
+import { LikeModel } from '../../models/like.js'
+let classicModel = new ClassicModel(); // 创建classicModel实例
+let likecModel = new LikeModel(); // 创建likecModel实例
 Page({
 
   /**
@@ -9,13 +11,20 @@ Page({
   data: {
     classic:null
   },
-
+  /**
+   * 监听点赞事件
+   */
+  onLike(event){
+    //服务器请求 
+    let behavior = event.detail.behavior;
+    likecModel.like(behavior,this.data.classic.id,this.data.classic.type)
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     // 获取最近一期刊
-    classic.getLastest((res)=>{
+    classicModel.getLastest((res)=>{
       //数据更新
       this.setData({  // 设置data里属性的值
         classic:res  // 先添加classic到data 再进行数据更新

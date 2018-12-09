@@ -40,13 +40,14 @@ Component({
    */
   methods: {
     onLike(event){  // 关注事件触摸
-      console.log(event);
       this.properties.like = !this.properties.like;
       this.properties.like?this.properties.count++:this.properties.count--;
       this.setData({  // 更新数据 渲染到页面上 setData
         count:this.properties.count,
         like:this.properties.like
-      })
+      });
+      // 激活like事件 传递行为
+      this.triggerEvent('like',{behavior:this.properties.like})  
    }
   }
 })

@@ -7,7 +7,7 @@ Component({
     img:{
       type:String,
       value:'',
-      observe(){
+      observe(){    
 
       }
     },
