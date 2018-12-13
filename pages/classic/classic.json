@@ -2,7 +2,8 @@
     "usingComponents": {
       "v-like": "/components/like/index",
       "v-movie": "/components/classic/movie/index",
-      "v-epsoide": "/components/classic/epsoide/index"
+      "v-epsoide": "/components/classic/epsoide/index",
+      "v-navi": "/components/classic/navi/index"
     }
 }
 

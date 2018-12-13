@@ -1,0 +1,13 @@
+<!--components/classic/navi/index.wxml-->
+<view class="navi-container">
+    <image src="images/triangle.dis@left.png">
+        
+    </image>
+
+     <text>
+      饮食男女
+     </text>
+     <image src="images/triangle.dis@left.png">
+         
+     </image>
+</view>

@@ -3,3 +3,6 @@
      <v-like class="like" bind:like='onLike' like="{{classic.like_status}}" count="{{classic.fav_nums}}"></v-like> 
 </view>
 <v-movie img="{{classic.image}}" content="{{classic.content}}"></v-movie>
+<v-navi></v-navi>
+
+
