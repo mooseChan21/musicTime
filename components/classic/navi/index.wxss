@@ -1,9 +1,18 @@
 /* components/classic/navi/index.wxss */
 .navi-container{
-    display: flex;
-    height: 70rpx;
+    display: inline-flex;
+    width: 600rpx;
+    height: 80rpx;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 200rpx
+    background: rgb(243, 239, 239)
+}
+.icon{
+    height: 80rpx;
+    width: 80rpx;
+}
+.title{
+    font-size: 24rpx;
+    font-weight: 600
 }

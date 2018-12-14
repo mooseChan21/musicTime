@@ -1,8 +1,12 @@
-<view class="header" hover-class="none" hover-stop-propagation="false">
-     <v-epsoide class="epsoide" index="{{classic.index}}"></v-epsoide>
-     <v-like class="like" bind:like='onLike' like="{{classic.like_status}}" count="{{classic.fav_nums}}"></v-like> 
+<view class="container" hover-class="none" hover-stop-propagation="false">
+     <view class="header" hover-class="none" hover-stop-propagation="false">
+          <v-epsoide class="epsoide" index="{{classic.index}}"></v-epsoide>
+          <v-like class="like" bind:like='onLike' like="{{classic.like_status}}" count="{{classic.fav_nums}}"></v-like> 
+     </view>
+     <v-movie img="{{classic.image}}" content="{{classic.content}}"></v-movie>
+     <v-navi bind:left="onNext" bind:right="onPrevious" class="navi" title="{{classic.title}}" first="{{first}}" lastest="{{lastest}}"></v-navi>
+     <v-music content='{{classic.content}}' img="{{classic.image}}"></v-music>
 </view>
-<v-movie img="{{classic.image}}" content="{{classic.content}}"></v-movie>
-<v-navi></v-navi>
+
 
 

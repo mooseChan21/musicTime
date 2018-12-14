@@ -1,13 +1,8 @@
 <!--components/classic/navi/index.wxml-->
 <view class="navi-container">
-    <image src="images/triangle.dis@left.png">
-        
+    <image bind:tap="onLeft" class="icon" src="{{lastest?disLeftSrc:leftSrc}}">
     </image>
-
-     <text>
-      饮食男女
-     </text>
-     <image src="images/triangle.dis@left.png">
-         
+     <text class="title">{{title}}</text>
+     <image bind:tap="onRight"  class="icon" src="{{first?disRightSrc:rightSrc}}"> 
      </image>
 </view>

@@ -9,7 +9,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    classic:null
+    classic:null,
+    forst:false,
+    lastest:true
   },
   /**
    * 监听点赞事件
@@ -18,6 +20,18 @@ Page({
     //服务器请求 
     let behavior = event.detail.behavior;
     likecModel.like(behavior,this.data.classic.id,this.data.classic.type)
+  },
+  /*
+  监听期刊左切换事件
+  */
+  onNext(event){
+  console.log(event)
+   },
+  /*
+  监听期刊右切换事件
+  */
+ onPrevious(event){
+  console.log(event)
   },
   /**
    * 生命周期函数--监听页面加载

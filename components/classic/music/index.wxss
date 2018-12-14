@@ -1,0 +1,27 @@
+/* components/classic/music/index.wxss */
+.music-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+.music-container image:nth-child(1){
+    width: 120rpx;
+    height: 120rpx;   
+}
+.music-container image:nth-child(2){
+    width: 120rpx;
+    height: 120rpx;   
+}
+.music-container image:nth-child(3){
+    width: 44rpx;
+    height: 147rpx;
+    position: relative;
+    right:296rpx;
+    bottom:68rpx;    
+}
+.content{
+    font-size: 36rpx;
+    /* 设置最大宽度  */
+    max-width: 550rpx;
+}
