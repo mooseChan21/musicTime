@@ -1,0 +1,10 @@
+<!--components/classic/essay/index.wxml-->
+<view class="essay-container" hover-class="none" hover-stop-propagation="false">
+    <image class="" src="{{img}}">
+    </image>
+    <image class="" src="images/essay@tag.png">
+    </image>
+    <text class="">
+     {{content}}
+    </text>
+</view>

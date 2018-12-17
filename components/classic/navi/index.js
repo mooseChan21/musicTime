@@ -29,9 +29,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
+      // 自定义事件
         onLeft:function(event){
           if(!this.properties.lastest){  // 判断是否能点击 最新一期  左边不能点击
-            this.triggerEvent('left',{},{})
+            this.triggerEvent('left',{},{}) 
           }
         },
         onRight(event){

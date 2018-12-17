@@ -21,18 +21,23 @@ Page({
     let behavior = event.detail.behavior;
     likecModel.like(behavior,this.data.classic.id,this.data.classic.type)
   },
+ 
   /*
-  监听期刊左切换事件
+  监听期刊切换事件
   */
   onNext(event){
   console.log(event)
-   },
-  /*
-  监听期刊右切换事件
-  */
+  
+},
  onPrevious(event){
-  console.log(event)
-  },
+    let index = this.data.classic.index;
+    classicModel.getPrevious(index,(res)=>{
+       this.setData({
+        classic:res
+       })
+    })
+},
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -43,7 +48,7 @@ Page({
       this.setData({  // 设置data里属性的值
         classic:res  // 先添加classic到data 再进行数据更新
       });
-      console.log(this.data);
+    
     })
   },
 

@@ -2,7 +2,7 @@
 <view class="navi-container">
     <image bind:tap="onLeft" class="icon" src="{{lastest?disLeftSrc:leftSrc}}">
     </image>
-     <text class="title">{{title}}</text>
+    <text class="title">{{title}}</text>
      <image bind:tap="onRight"  class="icon" src="{{first?disRightSrc:rightSrc}}"> 
      </image>
 </view>
