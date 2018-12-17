@@ -1,5 +1,4 @@
 // components/movie/index.js
- //import { classicBeh } from '../classic-beh.js'
 Component({
   /**
    * 组件的属性列表
@@ -10,7 +9,9 @@ Component({
     content: String
   },
   attached(){
-    
+  },
+  attached(){
+   console.log(this.properties)
   },
   /**
    * 组件的初始数据

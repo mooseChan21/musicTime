@@ -23,6 +23,7 @@ Component({
        disRightSrc:'images/triangle.dis@right.png',
        leftSrc:'images/triangle@left.png',
        rightSrc:'images/triangle@right.png'
+
   },
 
   /**
@@ -40,5 +41,6 @@ Component({
             this.triggerEvent('right',{},{})
           }
         }
+
   }
 })

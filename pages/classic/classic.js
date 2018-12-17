@@ -10,7 +10,7 @@ Page({
    */
   data: {
     classic:null,
-    forst:false,
+    first:false,
     lastest:true
   },
   /**
@@ -25,19 +25,22 @@ Page({
   /*
   监听期刊切换事件
   */
-  onNext(event){
-  console.log(event)
-  
-},
+ onNext(event){
+   this._getClassic('next');
+ },
  onPrevious(event){
-    let index = this.data.classic.index;
-    classicModel.getPrevious(index,(res)=>{
-       this.setData({
-        classic:res
-       })
-    })
+  this._getClassic('previous');
 },
-
+_getClassic(nextOrPrevious){
+  let index = this.data.classic.index;
+  classicModel.getClassic(index,nextOrPrevious,(res)=>{
+     this.setData({
+      classic:res,
+      lastest:classicModel.isLastest(res.index),
+      first:classicModel.isFirst(res.index)
+     });
+  })
+},
   /**
    * 生命周期函数--监听页面加载
    */
@@ -48,7 +51,6 @@ Page({
       this.setData({  // 设置data里属性的值
         classic:res  // 先添加classic到data 再进行数据更新
       });
-    
     })
   },
 
@@ -98,6 +100,7 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
+    ocnsole.log(1111)
 
   }
 })

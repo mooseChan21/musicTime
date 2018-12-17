@@ -6,3 +6,4 @@
      <image bind:tap="onRight"  class="icon" src="{{first?disRightSrc:rightSrc}}"> 
      </image>
 </view>
+

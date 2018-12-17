@@ -9,5 +9,3 @@
      <v-navi bind:left="onNext" bind:right="onPrevious" class="navi" title="{{classic.title}}" first="{{first}}" lastest="{{lastest}}"></v-navi>
 </view>
 
-
-

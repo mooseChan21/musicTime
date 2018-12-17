@@ -3,9 +3,9 @@
       "v-like": "/components/like/index",
       "v-movie": "/components/classic/movie/index",
       "v-epsoide": "/components/classic/epsoide/index",
-      "v-navi": "/components/classic/navi/index",
       "v-music": "/components/classic/music/index",
-      "v-essay": "/components/classic/essay/index"
+      "v-essay": "/components/classic/essay/index",
+      "v-navi": "/components/classic/navi/index"
     }
 }
 

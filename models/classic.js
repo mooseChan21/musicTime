@@ -5,21 +5,15 @@ class ClassicModel extends HTTP{  // 做法类似于vueX  ClassicModel继承了H
         this.request({  // 调用父类的request
             url:'/classic/latest',
             success:(res)=>{
-                callBack(res)
+                callBack(res);
+                wx.removeStorageSync('lastest');
+                this._setLastestIndex(res.index);
             }
           }); 
     }
-    getPrevious(index,callBack){//获取上一期
+    getClassic(index,nextOrPrevious,callBack){
         this.request({
-            url:'/classic/'+index+'/previous',
-            success:(res)=>{
-                callBack(res)
-            }
-        })
-    }
-    getNext(index,callBack){  //获取下一期
-        this.request({
-            url:'/classic/'+index+'/next',
+            url:'/classic/'+index+'/'+nextOrPrevious,
             success:(res)=>{
                 callBack(res)
             }
@@ -29,7 +23,14 @@ class ClassicModel extends HTTP{  // 做法类似于vueX  ClassicModel继承了H
         return index==1?true:false;
     }
     isLastest(index){
-
+        let lastestIndex = this._getLastestIndex('lastest');
+        return index==lastestIndex?true:false;
+    }
+    _setLastestIndex(index){
+        wx.setStorageSync('lastest', index)
+    }
+    _getLastestIndex(){
+        return wx.getStorageSync('lastest');
     }
 }
 export { ClassicModel }
