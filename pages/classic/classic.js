@@ -11,7 +11,9 @@ Page({
   data: {
     classic:null,
     first:false,
-    lastest:true
+    lastest:true,
+    likeStatus:false,
+    likeCount:0
   },
   /**
    * 监听点赞事件
@@ -26,20 +28,30 @@ Page({
   监听期刊切换事件
   */
  onNext(event){
-   this._getClassic('next');
+   this._updateGetClassic('next');
  },
  onPrevious(event){
-  this._getClassic('previous');
+  this._updateGetClassic('previous');
 },
-_getClassic(nextOrPrevious){
+_updateGetClassic(nextOrPrevious){
   let index = this.data.classic.index;
   classicModel.getClassic(index,nextOrPrevious,(res)=>{
+    this._getLikeStatus(res.id,res.type);
      this.setData({
       classic:res,
-      lastest:classicModel.isLastest(res.index),
+      lastest:classicModel.isLastest(res.index),  
       first:classicModel.isFirst(res.index)
      });
+     
   })
+},
+_getLikeStatus(id,catygory){
+    likecModel.getClassicLikeStatus(id,catygory,(res)=>{
+         this.setData({
+          likeStatus:res.like_status,
+          likeCount:res.fav_nums
+         })
+    })
 },
   /**
    * 生命周期函数--监听页面加载
@@ -49,11 +61,12 @@ _getClassic(nextOrPrevious){
     classicModel.getLastest((res)=>{
       //数据更新
       this.setData({  // 设置data里属性的值
-        classic:res  // 先添加classic到data 再进行数据更新
+        classic:res,  // 先添加classic到data 再进行数据更新
+        likeStatus:res.like_status,
+        likeCount:res.fav_nums
       });
     })
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -100,7 +113,6 @@ _getClassic(nextOrPrevious){
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-    ocnsole.log(1111)
-
+  
   }
 })

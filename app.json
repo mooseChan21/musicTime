@@ -9,5 +9,21 @@
     "navigationBarTextStyle": "black",
     "backgroundColor": "red",
     "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath":"pages/classic/classic",
+        "text": "流行"
+      },
+      {
+        "pagePath":"pages/classic/classic",
+        "text": "经典"
+      }
+    ]
   }
 }
