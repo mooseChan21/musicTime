@@ -1,4 +1,1 @@
-/* components/classic/essay/index.wxss */
-.essay-container{
-
-}
+@import '../common.wxss';

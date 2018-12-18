@@ -5,23 +5,44 @@
     justify-content: center;
     align-items: center
 }
-.music-container image:nth-child(1){
-    width: 120rpx;
-    height: 120rpx;   
+.classic-img{
+    width: 422rpx;
+    height: 422rpx;
+    margin-top: 60rpx;
+    border-radius: 50%;
 }
-.music-container image:nth-child(2){
+.play-img{
     width: 120rpx;
-    height: 120rpx;   
+    height: 120rpx; 
+    position: relative; 
+    bottom: 270rpx; 
 }
-.music-container image:nth-child(3){
-    width: 44rpx;
-    height: 147rpx;
+.tag{
+    width:44rpx;
+    height:128rpx;
     position: relative;
-    right:296rpx;
-    bottom:68rpx;    
+    bottom: 160rpx;
+    right:310rpx;   
 }
-.content{
-    font-size: 36rpx;
-    /* 设置最大宽度  */
-    max-width: 550rpx;
-}
+
+ .content{
+     font-size:36rpx;
+     max-width: 550rpx;
+  }
+  .rotation {
+    -webkit-transform: rotate(360deg);
+    animation: rotation 12s linear infinite;
+    -moz-animation: rotation 12s linear infinite;
+    -webkit-animation: rotation 12s linear infinite;
+    -o-animation: rotation 12s linear infinite;
+  }
+  
+  @-webkit-keyframes rotation {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+  
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }

@@ -5,6 +5,7 @@ Component({
    */
   //behaviors:[classicBeh],
   properties: {
+    hidden:Boolean,
     img:String,
     content: String
   },

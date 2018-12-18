@@ -6,10 +6,11 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false
+		"autoAudits": false,
+		"uglifyFileName": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.6.6",
+	"libVersion": "2.4.2",
 	"appid": "wx1afd47e7b45e9a10",
 	"projectname": "MusicTime",
 	"condition": {
