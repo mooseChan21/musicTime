@@ -26,5 +26,5 @@
 }
 .navi{
    position: absolute;
-   bottom: 120rpx
+   bottom: 40rpx;
 }
