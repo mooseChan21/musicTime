@@ -9,10 +9,23 @@ Component({
     img:String,
     content: String
   },
-  attached(){
+  created(){
+   
   },
   attached(){
-   console.log(this.properties)
+   
+  },
+  ready(){
+   
+  },
+  show(){
+    
+  },
+  hide(){
+    
+  },
+  detached(){  //在组件实例被从页面节点树移除时执行
+   
   },
   /**
    * 组件的初始数据

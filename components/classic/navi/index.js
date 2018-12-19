@@ -23,7 +23,6 @@ Component({
        disRightSrc:'images/triangle.dis@right.png',
        leftSrc:'images/triangle@left.png',
        rightSrc:'images/triangle@right.png'
-
   },
 
   /**
@@ -32,13 +31,13 @@ Component({
   methods: {
       // 自定义事件
         onLeft:function(event){
-          if(!this.properties.lastest){  // 判断是否能点击 最新一期  左边不能点击
-            this.triggerEvent('left',{},{}) 
+          if(!this.properties.lastest){
+            this.triggerEvent('left',{},{})  //向父组件传递事件
           }
         },
         onRight(event){
-          if(!this.properties.first){  // 最早一期右边不能点击
-            this.triggerEvent('right',{},{})
+          if(!this.properties.first){
+            this.triggerEvent('right',{},{}) //向父组件传递事件
           }
         }
 

@@ -30,14 +30,14 @@
      max-width: 550rpx;
   }
   .rotation {
-    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
     animation: rotation 12s linear infinite;
     -moz-animation: rotation 12s linear infinite;
     -webkit-animation: rotation 12s linear infinite;
     -o-animation: rotation 12s linear infinite;
   }
   
-  @-webkit-keyframes rotation {
+  @keyframes rotation {
     from {
       -webkit-transform: rotate(0deg);
     }
@@ -46,3 +46,4 @@
       -webkit-transform: rotate(360deg);
     }
   }
+

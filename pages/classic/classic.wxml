@@ -5,7 +5,7 @@
      </view>
      <v-movie hidden="{{classic.type!=100}}" img="{{classic.image}}" content="{{classic.content}}">
      </v-movie>
-     <v-music hidden="{{classic.type!=200}}" title="{{classic.title}}" src="{{classic.url}}" img="{{classic.image}}" content="{{classic.content}}">
+     <v-music wx:if="{{classic.type==200}}" title="{{classic.title}}" src="{{classic.url}}" img="{{classic.image}}" content="{{classic.content}}">
      </v-music>
      <v-essay hidden="{{classic.type!=300}}" img="{{classic.image}}" content="{{classic.content}}">
      </v-essay>
