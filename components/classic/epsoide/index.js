@@ -24,8 +24,8 @@ attached(){
   let year = date.getFullYear();
   let month = this.data.months[date.getMonth()];
   this.setData({
-    year:year,
-    month:month
+    year,
+    month
   })
 },
   /**
