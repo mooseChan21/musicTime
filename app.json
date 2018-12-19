@@ -18,11 +18,18 @@
     "list": [
       {
         "pagePath":"pages/classic/classic",
-        "text": "流行"
+        "text": "流行",
+        "iconPath":""
       },
       {
         "pagePath":"pages/classic/classic",
-        "text": "经典"
+        "text": "书单",
+        "iconPath":""
+      },
+      {
+        "pagePath":"pages/classic/classic",
+        "text": "书单",
+        "iconPath":""
       }
     ]
   }
