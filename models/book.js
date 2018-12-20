@@ -7,6 +7,22 @@ class BookModel extends HTTP{
                url:'/book/hot_list'
            }); 
        }
+       getBookDetail(bid){
+        return this.request({
+                url:`/book/${bid}/detail`
+        })
+       }
+       getBookShotComment(bid){
+           return this.request({
+               url:`/book/${bid}/short_comment`
+           })
+       }
+       getBookFavr(bid){
+           return this.request({
+            url:`/book/${bid}/favor`
+           })
+       }
+    
       
 }
 export{ BookModel }

@@ -22,7 +22,7 @@ Component({
      const bid = this.properties.book.id;
      // 跳转书籍详情
     wx.navigateTo({
-      url: `/pages/book-detail/book-detail?bid=${bid}`,
+      url: `/pages/book-detail/book-detail?bid=${bid}`
     })
     }
 
