@@ -22,7 +22,6 @@ class HTTP{
                   if(code.startsWith('2')){
                     params.success && params.success(res.data)
                   }else{
-                      console.log(res)
                     let error_code = res.data.error_code;
                     this._show_error_code(error_code)
                   }

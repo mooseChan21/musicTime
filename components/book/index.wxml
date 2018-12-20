@@ -1,0 +1,18 @@
+<!--components/book/book/index.wxml-->
+<view class="container" hover-class="none" hover-stop-propagation="false">
+        <image class="" src="{{book.image}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+        </image>
+        <view class="descrition" hover-class="none" hover-stop-propagation="false">
+           <text class="title" selectable="false" space="false" decode="false">
+                {{book.title}}
+           </text>
+           <text class="author" selectable="false" space="false" decode="false">
+               {{book.author}}
+           </text>
+            <view class="foot" hover-class="none" hover-stop-propagation="false">
+                    <text class="footer" selectable="false" space="false" decode="false">
+                      {{book.fav_nums}}喜欢
+                    </text>
+            </view>           
+        </view>
+</view>

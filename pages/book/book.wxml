@@ -1,2 +1,18 @@
 <!--pages/book/book.wxml-->
-<text>pages/book/book.wxml</text>
+<view class="" hover-class="none" hover-stop-propagation="false">
+    <view class="header" hover-class="none" hover-stop-propagation="false">
+        <view class="box" hover-class="none" hover-stop-propagation="false">
+            <image class="" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+            </image>
+            <text class="" selectable="false" space="false" decode="false">
+
+            </text>   
+        </view>
+    </view>
+    <view class="sub-container" hover-class="none" hover-stop-propagation="false">
+            <block wx:for="{{books}}">
+                    <v-book book="{{item}}"></v-book>
+            </block>
+    </view>
+  
+</view>

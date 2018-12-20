@@ -20,7 +20,7 @@ class ClassicModel extends HTTP{  // 做法类似于vueX  ClassicModel继承了H
         callBack(resObj);
       }else{
         this.request({
-            url:`/classic/${index}/${nextOrPrevious}`,
+            url:`/classic/${index}/${nextOrPrevious}`, 
             success:(res)=>{
                 callBack(res);
                 wx.setStorageSync(this._getKey(res.index),res);// 缓存期刊数据
