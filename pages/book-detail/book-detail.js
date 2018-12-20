@@ -1,30 +1,18 @@
-// pages/book/book.js
-import {
-  BookModel
-} from '../../models/book.js'
-const bookModel = new BookModel();
+// pages/book-detail/book-detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    //callback   回调地狱  服务器嵌套请求 每一层需要带上回调函数 非常的麻烦  剥夺函数return能力
-    //promise 代码风格  多个异步合并
-     //async await  异步  目前小程序不支持
-     books:[]
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    bookModel.getHotList().then(
-      res=>{
-         this.setData({
-          books:res
-         })
-    })
+    console.log(options)
   },
 
   /**

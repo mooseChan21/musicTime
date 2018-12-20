@@ -1,7 +1,63 @@
 /* pages/book/book.wxss */
-.contain{
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.sub-container{
+    display: flex;
+    -webkit-overflow-scrolling: touch;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100rpx;
+}
+.header{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    margin: 15px
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #f5f5f5;
+    border-bottom: 1px solid #f5f5f5;
+    box-shadow: 0 0 3px 0 #e3e3e3;
+    z-index: 99;
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    height: 100rpx;
+}
+.box{
+    border-radius: 50rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    height: 68rpx;
+    line-height: 68rpx;
+    width: 700rpx;
+    font-size: 24rpx;
+    color: #999999;
+}
+.box image{
+    height: 28rpx;
+    width: 28rpx;
+    margin-right: 14rpx;
+    margin-bottom: -4rpx;
+}
+.head-img{
+    margin-top: 40rpx;
+    height: 34rpx;
+    width: 107rpx;
+}
+.books-container{
+    display: flex;
+    flex-direction: row;
+    padding: 0 90rpx;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.books-container v-book{
+    margin-bottom: 16rpx;
 }
