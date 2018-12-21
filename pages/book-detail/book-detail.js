@@ -4,14 +4,14 @@ import {
 } from '../../models/book.js'
 const bookModel = new BookModel();
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
       book:null,
-      commonts:false,
-      likeStatus:0
+      comments:[],
+      likeStatus:false,
+      likeCount:0
   },
 
   /**
@@ -20,18 +20,24 @@ Page({
   onLoad: function (options) {
     const bid = options.bid;
     const detail = bookModel.getBookDetail(bid);
-    const commonts = bookModel.getBookShotComment(bid);
+    const comments = bookModel.getBookShotComment(bid);
     const likeStatus = bookModel.getBookFavr(bid); 
     detail.then(res=>{
-        console.log(res)
+      this.setData({
+        book:res
+      })
     })
-    commonts.then(res=>{
-      console.log(res)
+    comments.then(res=>{
+      this.setData({
+        comments:res.comments
+      })
     })
     likeStatus.then(res=>{
-      console.log(res)
-    })
-  },
+      this.setData({
+        likeStatus:res
+      })
+  })
+ },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

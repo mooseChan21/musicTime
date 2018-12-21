@@ -1,1 +1,66 @@
 /* pages/book-detail/book-detail.wxss */
+.container{
+    background-color: #f5f5f5;
+    width: 100%;
+}
+.head{
+    background-color: #fff;
+    padding-top: 40rpx;
+    padding-bottom: 40rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.head image{
+    width: 200rpx;
+    height: 300rpx;
+    box-shadow: 2px 2px 3px #e3e3e3;
+}
+.title{
+    color: #2f2f2f;
+    margin-top: 20rpx;
+    font-size: 38rpx;
+    font-weight: 600;
+} 
+.author{
+    font-size: 28rpx;
+    color: #999;
+}
+.sub-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30rpx;
+    background-color: #fff;
+    padding: 0 30rpx;
+   
+}
+.header-line{
+    font-size: 30rpx;
+    font-weight: 600;
+    margin: 20rpx 0 20rpx 0;
+    color:rgb(66, 65, 65);
+}
+.comment-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.comment-container v-tag{
+    margin-right: 10rpx;
+    margin-bottom: 8rpx;
+}
+.nums{
+    font-size: 22rpx;
+    margin-left: 10rpx;
+    color: #aaa;
+}
+
+/* 修改v-tag背景 */
+.comment-container>v-tag:nth-child(even)>view{
+    background: rgb(224, 180, 180)
+}
+.comment-container>v-tag:nth-child(odd)>view{
+    background: rgb(139, 184, 214)
+}

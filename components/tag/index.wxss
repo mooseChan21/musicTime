@@ -1,0 +1,14 @@
+/* components/tag/index.wxss */
+.tag-container{
+    background: #ccc;
+    /* 内敛弹性盒子样式 */
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 24rpx;
+    padding: 4rpx 12rpx;
+    background-color: #f5f5f5;
+    color: #666666;
+    border-radius: 2px;
+}
