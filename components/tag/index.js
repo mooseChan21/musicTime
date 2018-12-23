@@ -7,6 +7,8 @@ Component({
   options: {
     multipleSlots: true 
   },
+  // 外部向组件内部传递样式
+  externalClasses:['tag-class'],
   properties: {
     text:String
   },

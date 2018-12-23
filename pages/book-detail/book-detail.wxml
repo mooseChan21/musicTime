@@ -9,13 +9,15 @@
         <text class="header-line">短评</text>
         <view class="comment-container" hover-class="none" hover-stop-propagation="false">
                <block wx:for="{{comments}}" wx:key="">
-                  <v-tag text="{{item.content}}">
+                  <v-tag tag-class="{{index==0?'ex-tag1':''||index==1?'ex-tag2':''}}" text="{{item.content}}">
                       <!-- 使用插槽 -->
                       <text class="nums" slot="after">{{'+'+item.nums}}</text>
                   </v-tag>
                </block>
         </view>
     </view>
-    <view class="">
+    <view class="sub-container">
+        <text class="header-line" >内容简介</text>
+        <text class="" >{{book.summary}}</text>
     </view>
 </view>

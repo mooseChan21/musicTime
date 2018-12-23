@@ -57,10 +57,21 @@
     color: #aaa;
 }
 
-/* 修改v-tag背景 */
+/* 修改v-tag背景
 .comment-container>v-tag:nth-child(even)>view{
     background: rgb(224, 180, 180)
 }
 .comment-container>v-tag:nth-child(odd)>view{
     background: rgb(139, 184, 214)
+} */
+
+.ex-tag1{
+    background: rgb(228, 157, 157) !important
+}
+.ex-tag2{
+    background: rgb(158, 145, 145) !important
+}
+
+.content{
+    
 }
