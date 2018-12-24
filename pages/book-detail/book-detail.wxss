@@ -73,5 +73,5 @@
 }
 
 .content{
-    
+    font-size: 24rpx; 
 }

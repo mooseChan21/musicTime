@@ -18,6 +18,6 @@
     </view>
     <view class="sub-container">
         <text class="header-line" >内容简介</text>
-        <text class="" >{{book.summary}}</text>
+        <text class="content">{{book.summary}}</text>
     </view>
 </view>
