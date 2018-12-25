@@ -1,4 +1,5 @@
 <!--pages/book-detail/book-detail.wxml-->
+<wxs src='../../utils/filter.wxs' module='tool'></wxs>
 <view class="container" hover-class="none" hover-stop-propagation="false">
     <view class="head">
         <image src="{{book.image}}"> </image>
@@ -8,8 +9,8 @@
     <view class="sub-container">
         <text class="header-line">短评</text>
         <view class="comment-container" hover-class="none" hover-stop-propagation="false">
-               <block wx:for="{{comments}}" wx:key="">
-                  <v-tag tag-class="{{index==0?'ex-tag1':''||index==1?'ex-tag2':''}}" text="{{item.content}}">
+               <block wx:for="{{tool.limit(comments,8)}}" wx:key="">
+                  <v-tag tag-class="{{bookTool.outLinesStyle(index)}}" text="{{item.content}}">
                       <!-- 使用插槽 -->
                       <text class="nums" slot="after">{{'+'+item.nums}}</text>
                   </v-tag>
@@ -18,6 +19,61 @@
     </view>
     <view class="sub-container">
         <text class="header-line" >内容简介</text>
-        <text class="content">{{book.summary}}</text>
+        <text class="content" decode="{{true}}">{{tool.format(book.summary)}}</text>
     </view>
+    <view class="sub-container">
+            <text class="header-line" >书本信息</text>
+             <view class="book-info">
+                 <view class="verigt-alg descrition">
+                        <text>出版社</text>
+                        <text>出版年</text>
+                        <text>页数</text>
+                        <text>定价</text>
+                        <text>装帧</text>
+                 </view>
+                 <view class="verigt-alg">
+                        <text>{{book.publisher}}</text>
+                        <text>{{book.pubdate}}</text>
+                        <text>{{book.pages}}</text>
+                        <text>{{book.price}}</text>
+                        <text>{{book.binding}}</text>
+                 </view>
+                   
+             </view>
+        </view>
+        <!-- 短评 -->
+       <view class="post-container" hidden="{{posting}}">
+            <view bind:tap="onFakePost" class="post-fake">
+               <text>输入短评</text>
+            </view>   
+            <view class="like-container">
+                <v-like bind:like="onLike" class="like" like="{{likeStatus}}" count="{{likeCount}}" />
+            </view>
+       </view>
+       <view class='posting-container' wx:if="{{posting}}">
+           <view class="posting-header">
+                <text wx:if="{{comments==true}}">仅可点击标签+1</text>
+                <text wx:else>暂无短评</text>
+                <text bind:tap="onCancel" class="cancel">取消</text>
+           </view>
+           <view class="posting-comment">
+               <block wx:for="{{tool.limit(comments,3)}}"wx:key="content">
+                    <v-tag bind:tap="" tag-class="{{bookTool.outLinesStyle(index)}}" text="{{item.content}}">
+                            <!-- 使用插槽 -->
+                            <text class="nums" slot="after">{{'+'+item.nums}}</text>
+                    </v-tag> 
+               </block>
+                
+           </view>
+           
+       </view>
 </view>
+<!-- 使用wxs编写与wxml交互脚本 -->
+<wxs module='bookTool'>
+   var outLinesStyle = function(index){
+          return index==0?'ex-tag1':index==1?'ex-tag2':'';
+   }
+    module.exports = {
+        outLinesStyle:outLinesStyle
+    }
+</wxs>

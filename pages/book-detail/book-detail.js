@@ -2,7 +2,12 @@
 import {
   BookModel
 } from '../../models/book.js'
+import{
+  LikeModel
+} from '../../models/like.js'
+
 const bookModel = new BookModel();
+const likeModel = new LikeModel();
 Page({
   /**
    * 页面的初始数据
@@ -11,7 +16,8 @@ Page({
       book:null,
       comments:[],
       likeStatus:false,
-      likeCount:0
+      likeCount:0,
+      posting:false
   },
 
   /**
@@ -34,11 +40,24 @@ Page({
     })
     likeStatus.then(res=>{
       this.setData({
-        likeStatus:res
+        likeStatus:res.like_status,
+        likeCount:res.fav_nums
       })
   })
  },
-
+ onFakePost(){
+      this.setData({
+        posting:true
+      })
+ },
+ /**
+   * 监听点赞事件
+   */
+  onLike(event) {
+    //服务器请求 
+    let behavior = event.detail.behavior;
+    likeModel.like(behavior, this.data.book.id, 400);
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
