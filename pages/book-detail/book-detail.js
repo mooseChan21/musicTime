@@ -26,16 +26,11 @@ Page({
   onLoad: function (options) {
     const bid = options.bid;
     const detail = bookModel.getBookDetail(bid);
-    const comments = bookModel.getBookShotComment(bid);
+    this.getBookComments(bid);
     const likeStatus = bookModel.getBookFavr(bid); 
     detail.then(res=>{
       this.setData({
         book:res
-      })
-    })
-    comments.then(res=>{
-      this.setData({
-        comments:res.comments
       })
     })
     likeStatus.then(res=>{
@@ -45,11 +40,42 @@ Page({
       })
   })
  },
- onFakePost(){
+  getBookComments(bid){
+    bookModel.getBookShotComment(bid).then(res=>{
       this.setData({
-        posting:true
+        comments:res.comments
       })
- },
+    })
+  },
+  onFakePost(){
+       this.setData({
+         posting:true
+       })
+    },
+  onCancel: function(){
+      this.setData({
+        posting:false
+      })
+    },
+  addPostingTag(obj){ //添加短评
+      const comment = obj.detail.text;
+      bookModel.addBookShotComment({
+        book_id:this.data.book.id,
+        content:comment}
+        ).then(res=>{
+            this.getBookComments(this.data.book.id);  // 查询短评
+            this.setData({
+               posting:false
+            })
+            wx.showToast({
+              title:'短评+1',
+              icon:'none',  // 真鸡有效           
+              duration: 2000
+            })
+      })
+    },
+  onPost(){ //发送短评
+  },  
  /**
    * 监听点赞事件
    */

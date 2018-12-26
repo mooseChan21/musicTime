@@ -1,6 +1,7 @@
 <!--pages/book-detail/book-detail.wxml-->
 <wxs src='../../utils/filter.wxs' module='tool'></wxs>
 <view class="container" hover-class="none" hover-stop-propagation="false">
+    <v-mask wx:if="{{posting}}" mask-class="{{posting?'showMask':'hideMask'}}"></v-mask>
     <view class="head">
         <image src="{{book.image}}"> </image>
         <text class="title">{{book.title}}</text>
@@ -58,14 +59,13 @@
            </view>
            <view class="posting-comment">
                <block wx:for="{{tool.limit(comments,3)}}"wx:key="content">
-                    <v-tag bind:tap="" tag-class="{{bookTool.outLinesStyle(index)}}" text="{{item.content}}">
+                    <v-tag bind:tapping="addPostingTag" tag-class="{{bookTool.outLinesStyle(index)}}" text="{{item.content}}">
                             <!-- 使用插槽 -->
                             <text class="nums" slot="after">{{'+'+item.nums}}</text>
                     </v-tag> 
                </block>
-                
            </view>
-           
+           <input bindconfirm="onPost" class="post" placeholder='短评最多12个字'></input>
        </view>
 </view>
 <!-- 使用wxs编写与wxml交互脚本 -->

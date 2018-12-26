@@ -1,6 +1,7 @@
 <view class="container" hover-class="none" hover-stop-propagation="false">
      <view class="header" hover-class="none" hover-stop-propagation="false">
           <v-epsoide class="epsoide" index="{{classic.index}}"></v-epsoide>
+          
           <v-like class="like" bind:like='onLike' like="{{likeStatus}}" count="{{likeCount}}"></v-like> 
      </view>
      <v-movie hidden="{{classic.type!=100}}" img="{{classic.image}}" content="{{classic.content}}">

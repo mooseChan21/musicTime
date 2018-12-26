@@ -24,7 +24,7 @@ Page({
    */
   onLike(event) {
     //服务器请求 
-    let behavior = event.detail.behavior;
+    let behavior = event.detail.behavior
     likecModel.like(behavior, this.data.classic.id, this.data.classic.type)
   },
 

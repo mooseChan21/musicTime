@@ -22,7 +22,12 @@ class BookModel extends HTTP{
             url:`/book/${bid}/favor`
            })
        }
-    
-      
+       addBookShotComment(params){
+        return this.request({
+            url:'/book/add/short_comment',
+            method:'POST',
+            data:params
+        })
+    }
 }
 export{ BookModel }

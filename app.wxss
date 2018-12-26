@@ -1,3 +1,34 @@
 page{
  font-family: "PingFangSC-Thin";
 }
+
+.showMask{
+    animation: maskShow 1s forwards 0s 1;
+    -moz-animation: maskShow 1s forwards 0s 1;
+    -webkit-animation: maskShow 1s forward 0s 1;
+    -o-animation: maskShow 1s forwards 0s 1;
+}
+@keyframes maskShow{
+    form{
+        opacity:0;
+    }
+    to{
+        opacity:0.6;
+    }
+}
+
+.hideMask{
+    opacity: 0.6;
+    animation: hideMask 1s forwards 0s 1;
+    -moz-animation: hideMask 1s forwards 0s 1;
+    -webkit-animation: hideMask 1s forward 0s 1;
+    -o-animation: hideMask 1s forwards 0s 1;
+}
+@keyframes hideMask{
+    form{
+        opacity:0.6;
+    }
+    to{
+        opacity:0;
+    }
+}
