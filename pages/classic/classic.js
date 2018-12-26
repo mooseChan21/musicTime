@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // pages/classic/classic.js
 import {
   ClassicModel
@@ -121,3 +122,5 @@ Page({
   }
 
 })
+=======
+>>>>>>> b24ebc2d33d694cd1e857122cdb761675300c07b

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 .container{
   display: flex;
@@ -28,3 +29,5 @@
    position: absolute;
    bottom: 40rpx;
 }
+=======
+>>>>>>> b24ebc2d33d694cd1e857122cdb761675300c07b

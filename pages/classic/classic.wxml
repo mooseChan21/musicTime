@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <view class="container" hover-class="none" hover-stop-propagation="false">
      <view class="header" hover-class="none" hover-stop-propagation="false">
           <v-epsoide class="epsoide" index="{{classic.index}}"></v-epsoide>
@@ -13,3 +14,5 @@
      <v-navi bind:left="onNext" bind:right="onPrevious" class="navi" title="{{classic.title}}" first="{{first}}" lastest="{{lastest}}"></v-navi>
 </view>
 
+=======
+>>>>>>> b24ebc2d33d694cd1e857122cdb761675300c07b
